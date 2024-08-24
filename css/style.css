@@ -1,0 +1,29 @@
+/* Ensure the background image fills the entire page */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('/imagens/fundo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Center the .capa image within its section */
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+}
+
+.capa {
+    max-width: 100%; /* Prevent the image from exceeding the width of the viewport */
+    max-height: 100%; /* Prevent the image from exceeding the height of the viewport */
+    object-fit: contain; /* Ensure the image scales nicely within the container */
+}
